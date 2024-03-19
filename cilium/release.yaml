@@ -27,4 +27,8 @@ spec:
       name: hubble-ui
       automount: true
       annotations: {}
-   
+    hubble:
+        # -- Enable Hubble (true by default).
+      enabled: true
+        # -- Annotations to be added to all top-level hubble objects (resources under templates/hubble)
+      annotations: {}
