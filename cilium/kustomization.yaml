@@ -4,3 +4,7 @@ namespace: default
 resources:
   - repository.yaml
   - release.yaml
+patches:
+  - path: values.yaml
+    target:
+      kind: HelmRelease

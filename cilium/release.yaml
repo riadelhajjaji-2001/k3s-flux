@@ -14,6 +14,47 @@ spec:
   install:
     remediation:
       retries: 3
+      #---- charts values
   values:
+    bpf:
+      hostLegacyRouting: true
+    cni:
+      customConf: true
+      uninstall: false
+    encryption:
+      nodeEncryption: false
+    ipam:
+      mode: cluster-pool
+      operator:
+        clusterPoolIPv4PodCIDRList:
+        - 10.245.0.0/16
+    kubeProxyReplacement: disabled
     operator:
       replicas: 1
+      unmanagedPodWatcher:
+        restart: false
+    policyEnforcementMode: never
+    serviceAccounts:
+      cilium:
+        name: cilium
+      operator:
+        name: cilium-operator
+    tunnel: vxlan
+    tunnelPort: 8473
+    agent: false
+    hubble:
+      enabled: false
+      relay:
+        # set this to false as Hubble relay is already installed
+        enabled: false
+        tls:
+          server:
+            # set this to true if tls is enabled on Hubble relay server side
+            enabled: true
+      ui:
+        # enable Hubble UI
+        enabled: true
+        standalone:
+          # enable Hubble UI standalone deployment
+          enabled: true
+          # provide a volume containing Hubble relay client certificates to mount in Hubble UI pod
