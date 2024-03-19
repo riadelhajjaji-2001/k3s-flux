@@ -6,10 +6,12 @@ metadata:
   namespace: flux-system
 spec:
   interval: 1m0s
+  path: ./kustomize
+  prune: true
+  retryInterval: 2m0s
   sourceRef:
     kind: GitRepository
     name: guestbook
-  path: ./kustomize
-  prune: true
+  targetNamespace: default
+  timeout: 3m0s
   wait: true
-  timeout: 5m0s
