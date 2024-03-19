@@ -16,7 +16,7 @@ spec:
       retries: 3
   values:
     operator:
-      replicas: 1
+      replicas: 2
     ui:
     # enable Hubble UI
     enabled: true
