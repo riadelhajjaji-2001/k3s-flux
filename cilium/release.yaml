@@ -17,4 +17,8 @@ spec:
   values:
     operator:
       replicas: 1
-   
+    relay:
+      enabled: true 
+    hubble:
+      ui:
+        enabled: true
