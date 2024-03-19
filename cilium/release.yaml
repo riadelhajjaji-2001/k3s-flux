@@ -3,7 +3,7 @@ kind: HelmRelease
 metadata:
   name: cilium
 spec:
-  releaseName: podinfo
+  releaseName: cilium
   chart:
     spec:
       chart: cilium
@@ -17,18 +17,4 @@ spec:
   values:
     operator:
       replicas: 1
-    relay:
-      create: true
-      name: hubble-relay
-      automount: false
-      annotations: {}
-    ui:
-      create: true
-      name: hubble-ui
-      automount: true
-      annotations: {}
-    hubble:
-        # -- Enable Hubble (true by default).
-      enabled: true
-        # -- Annotations to be added to all top-level hubble objects (resources under templates/hubble)
-      annotations: {}
+   
