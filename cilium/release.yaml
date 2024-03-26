@@ -14,11 +14,4 @@ spec:
   install:
     remediation:
       retries: 3
-  values:
-    operator:
-      replicas: 1
-    relay:
-      enabled: true 
-    hubble:
-      ui:
-        enabled: true
+  
