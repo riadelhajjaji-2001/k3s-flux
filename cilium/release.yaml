@@ -10,8 +10,10 @@ spec:
       sourceRef:
         kind: HelmRepository
         name: cilium
-  interval: 50m
+  interval: 5m
   install:
     remediation:
       retries: 3
-  
+  values:
+    hostPort:
+      enabled: false
