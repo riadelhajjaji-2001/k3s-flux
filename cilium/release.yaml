@@ -16,7 +16,5 @@ spec:
       retries: 3
   values:
     operator:
-    create: false
-    name: cilium-operator
-    annotations: {}
+      replicas: 1
   
