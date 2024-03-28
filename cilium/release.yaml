@@ -11,6 +11,7 @@ spec:
         kind: HelmRepository
         name: cilium
   interval: 5m
+  targetNamespace: kube-system
   install:
     remediation:
       retries: 4
