@@ -6,7 +6,7 @@ spec:
   releaseName: cilium
   chart:
     spec:
-      chart: cilium-1.15.3
+      chart: cilium
       version: 1.15.3
       sourceRef:
         kind: HelmRepository
@@ -18,5 +18,5 @@ spec:
       retries: 4
   values:
     operator:
-      replicas: 2
+      replicas: 1
   
